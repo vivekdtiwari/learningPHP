@@ -1,7 +1,8 @@
 #banner {
-    background-image: url(../images/banner.jpg);
+    background-image: url(../Images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 5px;
     height: 200px;
     padding: 0px;
 }
@@ -13,4 +14,42 @@
     text-align: center;
     padding-top: 50px;
     border-radius: 5px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.navbar {
+    background-image: url(../Images/bar_background.png);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.active>a {
+    background-color: rgba(0,0,0,0.7) !important;
+    color: white !important;
+}
+
+#taglineImage {
+    height: 70px;
+    width: 70px;
+}
+
+footer {
+    margin-top: 20px;
+    height: 30px;
+    border: 3px solid #e3e3e3;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0.1em 0.1em #333;
+    background-image: url(../Images/bar_background.png);
+}
+
+#sidebar {
+    height:400px;
+    border: 3px solid #e3e3e3;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.imgText {
+    height: 100%;
 }
