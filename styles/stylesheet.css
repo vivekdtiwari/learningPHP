@@ -1,0 +1,16 @@
+#banner {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    padding: 0px;
+}
+
+#tagline {
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+    border-radius: 5px;
+}
