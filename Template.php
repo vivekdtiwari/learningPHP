@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="#">Coffee</a></li>
+                    <li><a href="Coffee.php">Coffee</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About</a></li>
                   </ul>

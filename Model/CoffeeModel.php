@@ -8,18 +8,17 @@ class CoffeeModel {
 
         //Open connection and Select database.
 
-        mysql_connect($host,$user,$passwd) or die(mysql_error());
-        mysql_select_db($database);
-        $result = mysql_query("SELECT DISTINCT type FROM coffee") or die(mysql_error());
+        $con = mysqli_connect($host,$user,$passwd,$database) or die(mysqli_connect_error());
+
+        $result = mysqli_query($con,"SELECT DISTINCT type FROM coffee") or die(mysqli_error());
         $types = array();
 
         //Get data from database.
-        while($row = mysql_fetch_array($result))
+        while($row = mysqli_fetch_array($result))
         {
-            array_push($row);
+            array_push($types, $row[0]);
         }
-
-        mysql_close();
+        mysqli_close();
         return $types;
     }
 
@@ -29,15 +28,14 @@ class CoffeeModel {
         require 'Credentials.php';
 
         //Open connection and select database.
-        mysql_connect($host,$user,$passwd) or die(mysql_error());
-        mysql_select_db($database);
+        $con = mysqli_connect($host,$user,$passwd,$database) or die(mysqli_connect_error());
 
         $query = "SELECT * FROM coffee WHERE type LIKE '$type'";
-        $result = mysql_query($query) or die(mysql_error());
+        $result = mysqli_query($con,$query) or die(mysqli_error());
         $coffeeArray = array();
 
         //Get data from database.
-        while($row = mysql_fetch_array($result))
+        while($row = mysqli_fetch_array($result))
         {
             $name = $row[1];
             $type = $row[2];
@@ -52,7 +50,7 @@ class CoffeeModel {
             array_push($coffeeArray,$coffee);
         }
         //Close connection and return the result.
-        mysql_close();
+        mysqli_close();
         return $coffeeArray;
     }
 
